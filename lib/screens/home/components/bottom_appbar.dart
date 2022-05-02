@@ -15,7 +15,7 @@ class CustomBottomAppBar extends StatefulWidget {
     required this.items,
     this.height = 60.0,
     this.iconSize = 24.0,
-    this.backgroundColor = const Color(0xffE5E5E5),
+    this.backgroundColor = Colors.white,
     this.color = Colors.black,
     this.selectedColor = const Color(0xffFF9F00),
     this.notchedShape,

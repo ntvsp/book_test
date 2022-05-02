@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../models/book.dart';
 import 'components/bottom_appbar.dart';
 import 'components/tabbar.dart';
 
@@ -118,12 +119,27 @@ class _HomeScreenState extends State<HomeScreen> {
           // body
           Expanded(
             child: GridView.builder(
+              scrollDirection: Axis.vertical,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                childAspectRatio: 0.8,
+                mainAxisSpacing: 10,
               ),
-              itemCount: 4,
+              itemCount: listBook.length,
               itemBuilder: (BuildContext context, int index) {
-                return const Text("data");
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(listBook[index].pathImage),
+                    Text(
+                      listBook[index].title,
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16),
+                    ),
+                  ],
+                );
               },
             ),
           ),
