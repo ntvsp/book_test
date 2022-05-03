@@ -83,11 +83,17 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: const [
                                 Text(
                                   " Tềm năng",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 14),
                                 ),
                                 Text(
                                   " Mater",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Color(0xffFF9F00),
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 14),
                                 ),
                               ],
                             ),
