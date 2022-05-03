@@ -1,7 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../models/book.dart';
 import 'components/bottom_appbar.dart';
 import 'components/tabbar.dart';
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                    color: Color(0xFFF5CEB8),
+                    // color: Color(0xFFF5CEB8),
                     image: DecorationImage(
                         alignment: Alignment.centerLeft,
                         image: ExactAssetImage("assets/images/image12.jpg"),
@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SafeArea(
                     child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 21),
+                  padding: const EdgeInsets.symmetric(horizontal: 17),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,14 +86,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 14),
+                                      fontSize: 14,
+                                      fontFamily: "Montserrat"),
                                 ),
                                 Text(
                                   " Mater",
                                   style: TextStyle(
                                       color: Color(0xffFF9F00),
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 14),
+                                      fontSize: 14,
+                                      fontFamily: "Montserrat"),
                                 ),
                               ],
                             ),
@@ -113,11 +115,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               )),
                         ],
                       ),
-                      const SizedBox(
-                        height: 70,
+                      SizedBox(
+                        height: Platform.isAndroid ? 35 : 55,
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 35,
                         child: Text(
                           "Chọn 3 danh mục",
                           style: TextStyle(
@@ -129,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Expanded(
                         child: MasonryGridView.count(
                           crossAxisCount: 3,
-                          mainAxisSpacing: 12,
+                          mainAxisSpacing: 17,
                           crossAxisSpacing: 10,
                           itemCount: listCategory.length,
                           scrollDirection: Axis.horizontal,
@@ -141,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     : indexSeletedCategories.add(index);
                               }),
                               child: Container(
-                                  padding: const EdgeInsets.all(7),
+                                  padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
                                       color:
                                           indexSeletedCategories.contains(index)
@@ -185,6 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+
           const TabBarCusTom(),
           // body
           indexSeletedCategories.length >= 3
@@ -211,10 +214,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Expanded(
       child: GridView.builder(
         scrollDirection: Axis.vertical,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.8,
-          mainAxisSpacing: 10,
+          childAspectRatio: Platform.isAndroid ? 0.71 : 0.79,
+          mainAxisSpacing: 9,
         ),
         itemCount: listBook.length,
         itemBuilder: (BuildContext context, int index) {

@@ -5,42 +5,45 @@ class TabBarCusTom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
-        length: 6,
-        child: TabBar(
-          isScrollable: true,
-          labelColor: Colors.black,
-          labelPadding: EdgeInsets.only(top: 10, bottom: 10),
-          unselectedLabelColor: Colors.black,
-          indicator: UnderlineTabIndicator(
-            insets: EdgeInsets.all(5),
-          ),
-          indicatorWeight: 0,
-          labelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-          unselectedLabelStyle:
-              TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-          indicatorSize: TabBarIndicatorSize.tab,
-          tabs: [
-            TabBarElement(
-              txtLabel: 'Phổ biến',
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 17),
+      child: DefaultTabController(
+          length: 6,
+          child: TabBar(
+            isScrollable: true,
+            labelColor: Colors.black,
+            labelPadding: EdgeInsets.only(top: 10, bottom: 10),
+            unselectedLabelColor: Colors.black,
+            indicator: UnderlineTabIndicator(
+              insets: EdgeInsets.all(5),
             ),
-            TabBarElement(
-              txtLabel: 'Bán chạy',
-            ),
-            TabBarElement(
-              txtLabel: 'Được xem nhiều',
-            ),
-            TabBarElement(
-              txtLabel: 'Được xem nhiều',
-            ),
-            TabBarElement(
-              txtLabel: 'Được xem nhiều',
-            ),
-            TabBarElement(
-              txtLabel: 'Được xem nhiều',
-            ),
-          ],
-        ));
+            indicatorWeight: 0,
+            labelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+            unselectedLabelStyle:
+                TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+            indicatorSize: TabBarIndicatorSize.tab,
+            tabs: [
+              TabBarElement(
+                txtLabel: 'Phổ biến',
+              ),
+              TabBarElement(
+                txtLabel: 'Bán chạy',
+              ),
+              TabBarElement(
+                txtLabel: 'Được xem nhiều',
+              ),
+              TabBarElement(
+                txtLabel: 'Được xem nhiều',
+              ),
+              TabBarElement(
+                txtLabel: 'Được xem nhiều',
+              ),
+              TabBarElement(
+                txtLabel: 'Được xem nhiều',
+              ),
+            ],
+          )),
+    );
   }
 }
 
