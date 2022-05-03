@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           SizedBox(
-            height: size.height * .35,
+            height: size.height * .40,
             child: Stack(
               children: [
                 Container(
@@ -115,8 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               )),
                         ],
                       ),
-                      SizedBox(
-                        height: Platform.isAndroid ? 35 : 55,
+                      const SizedBox(
+                        height: 60,
                       ),
                       const SizedBox(
                         height: 35,
