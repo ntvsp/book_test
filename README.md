@@ -3,8 +3,10 @@
 A new Flutter project.
 
 ## Getting Started main 
-main sua 123123 conflict
+main sua 123123
 dsdsdsdsd 123123123
+kjkjkjkj
+kkjjk
 
 This project is a starting point for a Flutter application.
 
